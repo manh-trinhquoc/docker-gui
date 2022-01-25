@@ -2,7 +2,7 @@ version: '3'
 
 services:
   ubuntu:
-  # thử tự làm nhưng chưa thành công
+  # show được firefox ra GUI nhưng chưa thao tác được
     build:
       context: .
       dockerfile: Ubuntu.Dockerfile
