@@ -1,0 +1,38 @@
+version: '3'
+
+services:
+  ubuntu:
+  # thử tự làm nhưng chưa thành công
+    build:
+      context: .
+      dockerfile: Ubuntu.Dockerfile
+    network_mode: "host"
+    environment:
+      - DISPLAY=host.docker.internal:0
+  xeyes:
+    build:
+      context: .
+      dockerfile: Xeyes.Dockerfile
+    network_mode: "host"
+    environment:
+      - DISPLAY=host.docker.internal:0
+  libreoffice:
+    image: woahbase/alpine-libreoffice:x86_64
+    network_mode: "host"
+    environment:
+      - DISPLAY=host.docker.internal:0
+  xmind:
+    image: dmitriiageev/xmind
+    network_mode: "host"
+    environment:
+      - DISPLAY=host.docker.internal:0
+  firefox:
+    image: jess/firefox
+    network_mode: "host"
+    environment:
+      - DISPLAY=host.docker.internal:0
+  vscode:
+    image: jess/vscode
+    network_mode: "host"
+    environment:
+      - DISPLAY=host.docker.internal:0
