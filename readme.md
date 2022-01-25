@@ -1,0 +1,1 @@
+phải cài X server
